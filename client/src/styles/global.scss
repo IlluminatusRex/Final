@@ -1,0 +1,12 @@
+@import "./settings.scss";
+@import "./typography.scss";
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: $backgroundColor;
+  color: $textColor;
+  font-family: $textFont;
+}

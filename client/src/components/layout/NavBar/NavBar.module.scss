@@ -1,0 +1,62 @@
+@import '../../../styles/typography.scss';
+@import '../../../styles//settings.scss';
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $containerColorLight;
+  img {
+    max-width: 150px;
+    scale: 0.8;
+  }
+
+  .box {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    a{
+      font-size: 20px;
+    }
+  }
+
+  a {
+    color: $textColor;
+    font-size: 16px;
+    margin-left: 2rem;
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+      transition: $button-transition;
+      animation: animation $button-animation-time forwards;
+    }
+  }
+  
+  .icon {
+    margin: 0 5px 0 5px;
+  }
+
+  .text {
+    display: inline-block;
+  }
+
+  @media (max-width: 767px) {
+    .links{
+      a{
+        font-size: 16px;
+      }
+    }
+    .text {
+      display: none;
+    }
+  }
+}

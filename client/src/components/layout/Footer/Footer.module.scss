@@ -1,0 +1,83 @@
+@import "../../../styles/settings.scss";
+@import "../../../styles/typography.scss";
+
+.root {
+  background-color: $containerColorDark;
+  border: 1px solid rgba(8, 8, 8, 0.18);
+  box-shadow: 10px 0 35px 0 rgba(107, 106, 106, 0.977);
+  border-radius: 20px;
+
+  .footerMenu {
+    padding: 3rem 0;
+    padding-left: 20px;
+
+    .menuWrapper {
+      h6 {
+        color: #ffffff;
+        text-transform: uppercase;
+        margin: 10 0 1rem 0;
+        text-align: center;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center; /* Wyśrodkowanie linków */
+        li {
+          display: inline-block;
+          margin-right: 10px;
+
+          a {
+            font-size: 14px;
+            line-height: 30px;
+            color: $primary;
+            font-family: $headerFont;
+            text-decoration: none;
+
+            &:hover {
+              color: #ffffff;
+              transition: $button-transition;
+              animation: animation $button-animation-time forwards;
+            }
+          }
+        }
+      }
+    }
+
+    .paymentMethods {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+      }
+    }
+  }
+
+  .bottomBar {
+    background-color: $backgroundColor;
+    height: 30px; /* Zmniejszenie wysokości dolnej belki */
+    border-bottom-left-radius: 20px; /* Zaokrąglenie lewej dolnej krawędzi */
+    border-bottom-right-radius: 20px; /* Zaokrąglenie prawej dolnej krawędzi */
+
+    :global(.container) > :global(.row) {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .copyright {
+      flex: 1; /* Rozciąganie na całą dostępną przestrzeń */
+      p {
+        margin: 0;
+        color: rgb(169, 169, 169);
+        font-size: 14px;
+        line-height: 26px;
+        text-align: center; /* Wyśrodkowanie tekstu */
+      }
+    }
+
+  }
+}

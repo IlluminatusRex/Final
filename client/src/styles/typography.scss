@@ -1,0 +1,22 @@
+@import './settings.scss';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Red+Hat+Display:wght@300;600&display=swap');
+
+
+// Fonts
+
+$headerFont: 'Red Hat Display', sans-serif;
+$textFont: 'Playfair Display', sans-serif;
+
+// Font size
+
+$logoSize: 30px;
+$navbarSize: 24px;
+$sloganSize: 3vw;
+$headingSize: 5vw;
+$textSize: 24px;
+$descriptionSize: 18px;
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: $headerFont;
+}
