@@ -1,0 +1,26 @@
+.button {
+  background: linear-gradient(
+    135deg,
+    rgba(39, 38, 38, 0.1),
+    rgba(20, 20, 20, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 40px;
+  border: 1px solid rgba(8, 8, 8, 0.18);
+  box-shadow: 0 0 50px 0 rgba(67, 66, 66, 0.739);
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 48px;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+ 
+  &:hover{
+    color: black;
+    background-color: yellow;
+    border-color: red;
+    animation: animation 1s forwards;
+  }
+}
