@@ -1,0 +1,146 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  background: linear-gradient(
+    135deg,
+    rgba(39, 38, 38, 0.1),
+    rgba(20, 20, 20, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(8, 8, 8, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  margin: 10px 0;
+
+  .photo {
+    position: relative;
+    padding: 5px 5px 100% 5px;
+    overflow: hidden;
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &:hover {
+      .content {
+        transform: scale(1.05);
+        transition: 0.5s;
+      }
+    }
+    &:not(:hover) {
+      .content {
+        transition: 0.5s;
+      }
+    }
+    button {
+      font-size: 1rem;
+      color:White;
+      background: linear-gradient(
+        135deg,
+        rgba(39, 38, 38, 0.1),
+        rgba(20, 20, 20, 0)
+      );
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(6, 6, 6, 0.278);
+      box-shadow: 0 0 32px 0 rgba(66, 65, 65, 0.775);
+
+      width: 25%;
+      padding: 10px;
+      height: 50%;
+      &:hover{
+        transform: scale(1.1);
+        background-color: $primary;
+        box-shadow: 0 0 32px 0 rgba(145, 144, 144, 0.695);
+        transition: 0.5s;
+
+      }
+      &:not(:hover) {
+        .content {
+          transition: 0.5s;
+        }
+      }
+      
+     
+    }
+    img {
+      position: absolute;
+      top: 20%;
+      left: 0%;
+      object-fit: contain;
+      width: 100%;
+      height: 50%;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+      }
+      &:not(:hover) {
+        transition: 0.5s;
+      }
+    }
+    .content {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      margin: 0 10px;
+      background: linear-gradient(
+        135deg,
+        rgba(116, 117, 118, 0.1),
+        rgba(0, 0, 0, 0)
+      );
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(8, 8, 8, 0.18);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+      a {
+        text-decoration: none;
+      }
+      h4 {
+        color: $primary;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+      h5 {
+        color: $containerColorDark;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 75%;
+    font-size: 1rem;
+    width: 100%;
+    
+
+    svg {
+      color: $primary;
+      font-size: 1.5rem;
+      width: 30%;
+    }
+
+    .priceBox {
+      display: flex;
+      justify-content: center;
+      font-size: 3rem;
+      width: 100%;
+      :last-child {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        svg {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}

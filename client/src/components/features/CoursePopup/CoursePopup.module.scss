@@ -1,0 +1,190 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/typography.scss';
+
+.root {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-height: 80vh;
+  background: linear-gradient(
+    135deg,
+    rgba(64, 64, 63, 0.1),
+    rgba(6, 85, 164, 0),
+    rgba(6, 85, 164, 0)
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(8, 8, 8, 0.18);
+  box-shadow: 0 8px 30px 0 rgba(112, 110, 110, 0.977);
+  padding: 20px 30px;
+  min-height: 70vh;
+
+  .exit {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+
+    svg {
+      color: rgba(141, 140, 138, 0.549);
+      border: 1px solid rgba(8, 8, 8, 0.18);
+      border-radius: 50%;
+      padding: 10px 15px;
+      background: linear-gradient(
+        135deg,
+        rgba(36, 36, 36, 0.632),
+        rgba(43, 43, 42, 0.658),
+        rgba(7, 7, 7, 0.463)
+      );
+      box-shadow: 2px 5px 20px 0 rgb(79, 79, 78);
+      &:hover {
+        color: $primary;
+
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+      }
+      &:not(:hover) {
+        transition: all 0.5s ease;
+      }
+    }
+  }
+  .container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .column {
+    height: 100%;
+    width: 100%;
+    margin-right: 10px;
+    .image {
+      height: 30vh;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .carInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+
+      height: 50%;
+      background: linear-gradient(
+        135deg,
+        rgba(14, 14, 14, 0.383),
+        rgba(0, 3, 7, 0.576),
+        rgba(1, 1, 1, 0.906)
+      );
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(8, 8, 8, 0.18);
+      box-shadow: 0 8px 30px 0 rgba(75, 74, 74, 0.977);
+
+      .bottomBox {
+        margin-top: 2rem;
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+
+      .leftColumn {
+        width: 100%;
+        display: flex;
+
+        > div {
+          padding: 10px;
+        }
+      }
+
+      .rightColumn {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        justify-content: space-between;
+
+        .description {
+          h3{
+            margin: 10px 0;
+          }
+          p {
+            font-size: 20px;
+          }
+        }
+        .priceBox {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          
+          .daysPicker {
+            text-align: center;
+            div {
+              display: flex;
+              align-items: center;
+            }
+            span {
+              width: 100%;
+            }
+            button {
+              padding: 2px 15px;
+            }
+            p {
+              margin: 0;
+              width: 5rem;
+            }
+          }
+          .price {
+            text-align: center;
+          }
+        }
+      }
+
+      .specs {
+        width: 100%;
+        height: 100%;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .box {
+          margin-top: 1rem;
+          min-width: 70%;
+          display: flex;
+          justify-content: space-between;
+          background: linear-gradient(
+            135deg,
+            rgba(64, 64, 63, 0.1),
+            rgba(6, 85, 164, 0),
+            rgba(6, 85, 164, 0)
+          );
+          backdrop-filter: blur(10px);
+          border-radius: 40px;
+          border: 1px solid rgba(8, 8, 8, 0.18);
+          box-shadow: 0 8px 30px 0 rgba(112, 110, 110, 0.977);
+          padding: 10px 20px;
+        }
+        svg {
+          font-size: 24px;
+          width: 40px;
+          margin-right: 10px;
+        }
+        .icon {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

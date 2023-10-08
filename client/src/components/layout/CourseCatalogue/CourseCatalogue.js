@@ -3,6 +3,7 @@ import styles from './CourseCatalogue.module.scss';
 import { useDispatch } from 'react-redux';
 import { loadCourses } from '../../../redux/coursesRedux';
 import { API_URL } from '../../../config';
+import  CourseBox from '../../../components/common/CourseBox/CourseBox';
 
 const CourseCatalogue = () => {
   const [itemsPerRow, setItemsPerRow] = useState(3);
@@ -111,7 +112,7 @@ const CourseCatalogue = () => {
               (activePage + 1) * itemsPerRow * 2
             ).map((item, index) => (
               <div key={index} className={`col-${12 / itemsPerRow}`}>
-                {/*  */}
+                <CourseBox {...item} />
                 <div>{item.title}</div>
               </div>
             ))}
