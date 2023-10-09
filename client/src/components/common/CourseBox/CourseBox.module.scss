@@ -10,7 +10,6 @@
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 1px solid rgba(8, 8, 8, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   margin: 10px 0;
 
   .photo {
@@ -50,6 +49,8 @@
       width: 25%;
       padding: 10px;
       height: 50%;
+     
+      
       &:hover{
         transform: scale(1.1);
         background-color: $primary;
@@ -63,7 +64,6 @@
         }
       }
       
-     
     }
     img {
       position: absolute;
@@ -85,16 +85,13 @@
       text-align: center;
       padding: 20px;
       margin: 0 10px;
-      background: linear-gradient(
-        135deg,
-        rgba(116, 117, 118, 0.1),
-        rgba(0, 0, 0, 0)
-      );
+      background-color: #efefef;
+      
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border-radius: 20px;
       border: 1px solid rgba(8, 8, 8, 0.18);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      
 
       a {
         text-decoration: none;
@@ -144,3 +141,4 @@
     }
   }
 }
+

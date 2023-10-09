@@ -88,7 +88,7 @@ const CourseCatalogue = () => {
               </div>
               <div className={`col ${styles.menu}`}></div>
               <div className={`col-auto ${styles.dots}`}>
-                <ul>{dots}</ul>
+                
               </div>
             </div>
           </div>

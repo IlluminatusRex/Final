@@ -1,0 +1,129 @@
+@import "../../../styles/typography.scss";
+.root {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    
+    .container {
+      display: flex;
+      flex-direction: row;
+      height: 50%;
+      background: linear-gradient(
+        135deg,
+        rgba(64, 64, 63, 0.1),
+        rgba(6, 85, 164, 0),
+        rgba(6, 85, 164, 0)
+      );
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 3px solid rgba(60, 99, 130, 0.18);
+      padding: 20px 30px;
+      margin: 20px;
+  
+      .leftColumn {
+        width: 100%;
+        height: 50%;
+        .image {
+          width: 100%;
+          height: 50%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      .info {
+        width: 100%;
+        height: 100%;
+  
+        .box {
+          margin: 1rem;
+          min-width: 70%;
+          font-size: 24px;
+          display: flex;
+          justify-content: space-between;
+          background: linear-gradient(
+            135deg,
+            rgba(64, 64, 63, 0.1),
+            rgba(6, 85, 164, 0),
+            rgba(6, 85, 164, 0)
+          );
+          backdrop-filter: blur(10px);
+          border-radius: 40px;
+          border: 1px solid rgba(8, 8, 8, 0.18);
+          box-shadow: 0 8px 30px 0 rgba(112, 110, 110, 0.977);
+          padding: 10px 20px;
+          .icon > * {
+            margin: 0 1rem;
+          }
+        }
+      }
+    }
+    .rightColumn {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      .description {
+        font-size: 24px;
+        p {
+          margin: 10px 0;
+        }
+      }
+      .priceBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .daysPicker {
+        margin: 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > * {
+          margin: 10px;
+        }
+        p {
+          min-width: 30px;
+          text-align: center;
+          font-size: 48px;
+        }
+      }
+      .price {
+        text-align: center;
+        p {
+          font-size: 48px;
+        } 
+      }
+    }
+    .faDollar {
+        font-family: $textFont;
+        font-size: 24px;
+    }
+  }
+  @media (max-width: 1400px) {
+    .root {
+      flex-direction: column;
+      align-items: center;
+      .leftColumn {
+        .info {
+          .specs {
+            .box {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .description {
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+      
+    }
+  }

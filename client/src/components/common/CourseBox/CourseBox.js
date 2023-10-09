@@ -27,7 +27,7 @@ const CourseBox = ({
   const [popup, setPopup] = useState(true);
 
   useEffect(() => {
-    if (window.innerWidth > 1500) {
+    if (window.innerWidth > 500) {
       setPopup(true);
     } else {
       setPopup(false);
