@@ -6,7 +6,7 @@ export const getCart = ({ cart }) => cart;
 export const getTotalPrice = memoize((state) =>
   state.cart.map((course) => course.totalPrice)
 );
-export const getCarsIds = memoize((state) => state.cart.map((course) => course.id));
+export const getCoursesIds = memoize((state) => state.cart.map((course) => course.id));
 
 //SECTION action name creators
 const reducerName = 'cart';
@@ -31,7 +31,7 @@ export const updateCartProduct = (payload) => ({
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case ADD_PRODUCT: {
-      return [...statePart, { ...action.payload, id: uuidv4() }];
+      return [...statePart, { ...action.payload, AddId: uuidv4() }];
     }
     case REMOVE_PRODUCT: {
       return [...statePart.filter((course) => course.id !== action.payload)];

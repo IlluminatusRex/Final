@@ -13,7 +13,7 @@ const Cart = () => {
       <h1 className="text-center m-4">Your Cart</h1>
       <>
         {cart.length === 0 ? (
-          <h3 className="text-center m-4">No cars</h3>
+          <h3 className="text-center m-4">No courses</h3>
         ) : (
           <>
             {cart.map((course) => (
