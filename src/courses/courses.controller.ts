@@ -10,8 +10,8 @@ import {
   } from '@nestjs/common';
   import { CoursesService } from './courses.service';
   import { ParseUUIDPipe } from '@nestjs/common';
-  import { CreateCourseDTO } from './dto/create-Course.dto';
-  import { UpdateCourseDTO } from './dto/update-Course.dto';
+  import { CreateCourseDTO } from './dto/create-course.dto';
+  import { UpdateCourseDTO } from './dto/update-course.dto';
   
   @Controller('Courses')
   export class CoursesController {
