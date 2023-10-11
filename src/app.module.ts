@@ -21,7 +21,7 @@ import configuration from './config/configuration';
   imports: [
     CoursesModule,
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '../../', 'client', 'build'),
+      rootPath: join(__dirname, '../../', 'src', 'client', 'build'),
     }),
     ConfigModule.forRoot({
       load: [configuration],
